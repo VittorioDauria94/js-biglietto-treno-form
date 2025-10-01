@@ -1,4 +1,4 @@
-// RACCOLTA DATI
+// DATA COLLECTION
 
 //Form
 const formElem = document.getElementById("ticket-form");
@@ -21,6 +21,7 @@ const priceKm = 0.21;
 const discountUnderage = 0.2;
 const discountOver65 = 0.4;
 
+//FORM LISTENER
 formElem.addEventListener("submit", (event) => {
   event.preventDefault();
 

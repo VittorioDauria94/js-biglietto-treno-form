@@ -1,3 +1,4 @@
+// Function getHouseImage
 function getHouseImage(house) {
   const name = house.toLowerCase();
 
@@ -14,6 +15,7 @@ function getHouseImage(house) {
   }
 }
 
+//Function calculateTicketPrice
 function calculateTicketPrice(distance, age) {
   let price = distance * price;
 
