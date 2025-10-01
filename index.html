@@ -16,7 +16,27 @@
 </head>
 
 <body>
-
+    <main>
+        <div class="container mt-5">
+            <form id="ticket-form" class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <label for="destination" class="form-label">Chilometri da percorrere</label>
+                    <input type="number" id="destination" class="form-control">
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <label for="age" class="form-label">Fascia di età</label>
+                    <select id="age" class="form-select">
+                        <option value="minor">Minorenne</option>
+                        <option value="adult">Maggiorenne</option>
+                        <option value="over-65">Over 65</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button id="send-btn" type="submit" class="btn btn-primary ">Invia</button>
+                </div>
+            </form>
+        </div>
+    </main>
     <!-- javascript -->
     <script src="./js/function.js"></script>
     <script src="./js/script.js"></script>
