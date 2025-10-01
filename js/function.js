@@ -17,7 +17,7 @@ function getHouseImage(house) {
 
 //Function calculateTicketPrice
 function calculateTicketPrice(distance, age) {
-  let price = distance * price;
+  let price = distance * priceKm;
 
   if (age === "minor") {
     price *= 1 - discountUnderage;

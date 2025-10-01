@@ -31,26 +31,31 @@ body {
 }
 
 .vd-btn:hover {
-  transform: scale(1.05) rotate(-1deg);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
 /* Main */
 /* title */
 
 .title-container {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .main-title {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #f0c330;
-  text-shadow: 2px 2px 5px #000;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #f0c330;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  color: #fdf6e3;
-  text-shadow: 1px 1px 3px #000;
+    font-size: 1.5rem;
+    color: #fdf6e3;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.card-body p,
+.card-body h5 {
+    margin-bottom: 1rem;
 }
