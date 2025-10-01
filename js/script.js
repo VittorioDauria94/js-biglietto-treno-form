@@ -8,31 +8,40 @@ const distanceInput = document.getElementById("distance");
 const selectAgeInput = document.getElementById("age");
 const destinationInput = document.getElementById("destination");
 
-//Elementi della card
+//Card element
+const ticketResult = document.getElementById("ticket-result");
+const houseImg = document.getElementById("house-img");
+const houseName = document.getElementById("house-name");
+const distancePrint = document.getElementById("distance-print");
+const agePrint = document.getElementById("age-print");
+const pricePrint = document.getElementById("price-print");
 
-// Variabili globali
+// Global variables
 const priceKm = 0.21;
 const discountUnderage = 0.2;
 const discountOver65 = 0.4;
-let ticketPrice = 0;
-let message = "";
 
 formElem.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const distanceElem = parseInt(distanceInput.value);
-  const ageElem = selectAgeInput.value;
-  
-  if (ageElem === "over-65") {
-    ticketPrice = (distanceElem * priceKm) * (1 - discountOver65);
-    message = `Il costo finale del biglietto sarà € ${ticketPrice.toFixed(2)}`;
-    } else if (ageElem === "adult") {
-    ticketPrice = distanceElem * priceKm;
-    message = `Il costo finale del biglietto sarà € ${ticketPrice.toFixed(2)}`;
-    } else {
-    ticketPrice = (distanceElem * priceKm) * (1 - discountUnderage);
-    message = `Il costo finale del biglietto sarà € ${ticketPrice.toFixed(2)}`;
-}
-    console.log(message);
-    
+  // Form Value
+  const distance = parseFloat(distanceInput.value);
+  const house = destinationInput.value;
+  const ageValue = selectAgeInput.value;
+  const ageText = selectAgeInput.options[selectAgeInput.selectedIndex].text;
+
+  const price = calculateTicketPrice(distance, ageValue);
+  const imgSrc = getHouseImage(house);
+
+  // Output
+  houseImg.src = imgSrc;
+  houseImg.alt = house;
+  houseName.innerHTML = `<strong>Casata da raggiungere:</strong> ${house}`;
+  distancePrint.innerHTML = `<strong>Distanza:</strong> ${distance} km`;
+  agePrint.innerHTML = `<strong>Fascia d'età:</strong> ${ageText}`;
+  pricePrint.innerHTML = `<strong>Prezzo:</strong> ${price.toFixed(
+    2
+  )} Galleoni`;
+
+  ticketResult.classList.remove("d-none");
 });
