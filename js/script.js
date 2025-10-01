@@ -45,4 +45,5 @@ formElem.addEventListener("submit", (event) => {
   )} Galleoni`;
 
   ticketResult.classList.remove("d-none");
+  formElem.reset();
 });
