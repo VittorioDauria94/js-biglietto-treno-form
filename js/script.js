@@ -29,7 +29,7 @@ formElem.addEventListener("submit", (event) => {
   const distance = parseFloat(distanceInput.value);
   const house = destinationInput.value;
   const ageValue = selectAgeInput.value;
-  const ageText = selectAgeInput.options[selectAgeInput.selectedIndex].text;
+  const ageText = selectAgeInput.selectedOptions[0].label;
 
   const price = calculateTicketPrice(distance, ageValue);
   const imgSrc = getHouseImage(house);

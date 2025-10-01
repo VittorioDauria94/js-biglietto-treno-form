@@ -2,17 +2,13 @@
 function getHouseImage(house) {
   const name = house.toLowerCase();
 
-  if (name === "algorindoro") {
-    return "./img/algorindoro.webp";
-  } else if (name === "debugclaw") {
-    return "./img/debugclaw.webp";
-  } else if (name === "bitflepuff") {
-    return "./img/bitflepuff.webp";
-  } else if (name === "serpicode") {
-    return "./img/serpicode.webp";
-  } else {
-    return "";
+  const imgHouse = ["algorindoro", "debugclaw", "bitflepuff", "serpicode"];
+
+  if (imgHouse.includes(name)) {
+    return `./img/${name}.webp`;
   }
+
+  return "./img/no-image.webp";
 }
 
 //Function calculateTicketPrice
