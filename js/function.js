@@ -23,3 +23,17 @@ function calculateTicketPrice(distance, age) {
 
   return price;
 }
+
+// Function showTicketAnimation
+function showTicketAnimation() {
+  if (clickCount === 1) {
+  ticketResult.classList.remove("d-none");
+  ticketResult.classList.add("show-ticket");
+  } else if (clickCount === 2) {
+    ticketResult.classList.remove("show-ticket");
+    setTimeout(() => {
+      ticketResult.classList.add("show-ticket");
+    }, 50);
+    clickCount = 1;
+  }
+}

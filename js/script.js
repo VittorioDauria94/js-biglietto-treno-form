@@ -20,6 +20,7 @@ const pricePrint = document.getElementById("price-print");
 const priceKm = 0.21;
 const discountUnderage = 0.2;
 const discountOver65 = 0.4;
+let clickCount = 0;
 
 //FORM LISTENER
 formElem.addEventListener("submit", (event) => {
@@ -44,6 +45,8 @@ formElem.addEventListener("submit", (event) => {
     2
   )} Galleoni`;
 
-  ticketResult.classList.remove("d-none");
+  clickCount++;
   formElem.reset();
+
+  showTicketAnimation();
 });
