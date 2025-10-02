@@ -57,7 +57,14 @@ body {
 
 .card-body p,
 .card-body h5 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.card-body h5 {
+    font-size: 2rem;
+    color: goldenrod;
+    text-shadow: 3px 3px 5px rgba(218, 165, 32, 0.7);
 }
 
 #ticket-result {
@@ -88,4 +95,15 @@ body {
         transform: translateY(0) scale(1);
         opacity: 1;
     }
+}
+
+#house-img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-text small{
+    color: goldenrod;
 }
